@@ -87,8 +87,7 @@ public class ShareCalculator {
 			result = c1.divide();
 		}
 		System.out
-		.println("this is the result of operation being printed from the main "
-				+ result);
+		.println("The result of your operation is... (drum roll) " + result);
 	}
 
 }
