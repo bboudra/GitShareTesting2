@@ -17,8 +17,33 @@ public class ShareCalculator {
 		num2 = sc.nextInt();
 		sc.close();
 	}
-
-	public int simple() {
+	public int selectOption()
+	{
+		Scanner sc = new Scanner(system.in);
+		System.out.println("Please select the number of the operation that you wish to reform\n"
+				+ "1 to add\n"
+				+ "2 to subtract\n"
+				+ "3 to mutliply\n"
+				+ "4 to divide";
+		int option = sc.nextInt();
+		return option;
+	}
+	public int add()
+	{
+		int i = num1;
+		int j = num2;
+		int result = i+j;
+		reutrn result;
+	}
+	
+	public int subtract()
+	{
+		int i = num1;
+		int j = num2;
+		int result = i+j;
+		return result;
+	}
+	public int multiply() {
 		int j = num1;
 		int i = num2;
 		int result = i * j;
@@ -42,14 +67,25 @@ public class ShareCalculator {
 		System.out.println("This is a basic calculator");
 		ShareCalculator c1 = new ShareCalculator();
 		c1.setter();
-		int result = c1.simple();
-		double result2 = c1.divide();
+		int optionChosen = c1.selectOption();
+		int result;
+		switch(optionChosen)
+		{
+		case 1:
+			result = c1.add();
+			break;
+		case 2:
+			result = c1.subtract();
+			break;
+		case 3:
+			result = c1.multiply();
+			break;
+		case 4:
+			result = c1.divide();
+		}
 		System.out
 		.println("this is the result of the multiplication operation being printed from the main "
 				+ result);
-		System.out
-		.println("this is the result of the division operation being printed from the main "
-				+ result2);
 	}
 
 }
