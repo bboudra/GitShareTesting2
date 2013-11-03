@@ -15,38 +15,40 @@ public class ShareCalculator {
 		System.out
 		.println("please enter the second number that you wish to operate on");
 		num2 = sc.nextInt();
-		sc.close();
 	}
 	public int selectOption()
 	{
-		Scanner sc = new Scanner(system.in);
+		
+		int option= 0;
 		System.out.println("Please select the number of the operation that you wish to reform\n"
 				+ "1 to add\n"
 				+ "2 to subtract\n"
 				+ "3 to mutliply\n"
-				+ "4 to divide";
-		int option = sc.nextInt();
+				+ "4 to divide");
+		Scanner sC = new Scanner(System.in);
+		option = sC.nextInt();
+		sC.close();
 		return option;
 	}
-	public int add()
+	public double add()
 	{
 		int i = num1;
 		int j = num2;
-		int result = i+j;
-		reutrn result;
-	}
-	
-	public int subtract()
-	{
-		int i = num1;
-		int j = num2;
-		int result = i+j;
+		double result = i+j;
 		return result;
 	}
-	public int multiply() {
+	
+	public double subtract()
+	{
+		int i = num1;
+		int j = num2;
+		double result = i-j;
+		return result;
+	}
+	public double multiply() {
 		int j = num1;
 		int i = num2;
-		int result = i * j;
+		double result = i * j;
 		System.out.println(result);
 		return result;
 	}
@@ -68,7 +70,8 @@ public class ShareCalculator {
 		ShareCalculator c1 = new ShareCalculator();
 		c1.setter();
 		int optionChosen = c1.selectOption();
-		int result;
+		double result = 0;
+		
 		switch(optionChosen)
 		{
 		case 1:
@@ -84,7 +87,7 @@ public class ShareCalculator {
 			result = c1.divide();
 		}
 		System.out
-		.println("this is the result of the multiplication operation being printed from the main "
+		.println("this is the result of operation being printed from the main "
 				+ result);
 	}
 
